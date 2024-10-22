@@ -21,7 +21,7 @@ public class customerClass {
         String outputFilePath = "testcustomerdiscount.txt";  //output file path
         
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
-         BufferedWriter bw = new BufferedWriter(new FileWriter(OutputFilePath));       
+         BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath)));       
         
         
     }
