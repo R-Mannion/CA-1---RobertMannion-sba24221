@@ -105,8 +105,8 @@ public double calculateFinalCost() {
     
     
     public static void main(String[] args) {
-        String inputFilePath = "testCustomers.txt"; //input file path
-        String outputFilePath = "testcustomerdiscount.txt";  //output file path
+        String inputFilePath = "C:\\Users\\manni\\Desktop\\Prog&Maths CA1\\CA-1---RobertMannion-sba24221\\CA1 Robert Mannion\\src\\ca1\\robert\\mannion\\customers.txt"; //input file path
+        String outputFilePath = "C:\\Users\\manni\\Desktop\\Prog&Maths CA1\\CA-1---RobertMannion-sba24221\\CA1 Robert Mannion\\src\\ca1\\robert\\mannion\\customerdiscount.txt";  //output file path
         
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
          BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath))) {
