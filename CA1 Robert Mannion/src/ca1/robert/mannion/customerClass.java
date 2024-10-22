@@ -88,7 +88,21 @@ public class customerClass {
         
         }
         
+        int lastPurchaseYear;
+        try {
+        lastPurchaseYear = Integer.parseInt(lastPurchaseYearStr); //converts the year of the customers last purchase from a string to an integer
+        if (lastPurchaseYear > 2024) { //checks to make sure the year given is not a future year
+        bw.write("Error: Invalid year of last purchase for customer: " + firstName + " " + lastName); //error message if the year gievn is after the current year
+        bw.newLine();
+        continue;
+        }
         
+        
+        } catch (NumberFormatException e) {
+        bw.write("Error: Invalid year for customer: " + firstName + " " + lastName); //error message if the year inputted is invalid
+        bw.newLine();
+        continue;
+        }
         
         
         
