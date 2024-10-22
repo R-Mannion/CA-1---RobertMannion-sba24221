@@ -71,6 +71,23 @@ public class customerClass {
         continue; //program moves on and skip rest current customers loop
         }
         
+        int customerClass;
+        try {
+            customerClass = Integer.parseInt(customerClass); //converts variable to an integer
+            if (customerClass < 1 || customerClass > 3){ //checks if class is between 1 and 3
+            bw.write("Error: Class must be between 1 and 3 for customer: " + firstName + " " + lastName); //error message if class falls outside the range
+            bw.newLine();
+            continue;
+            }
+        
+ 
+        } catch (NumberFormatException e){ //catch if input is not a number
+            bw.write("Error: Invalid class for customer: " + firstName + " " + lastName); //error message if class is input is not a number
+            bw.newLine();
+            continue;
+        
+        }
+        
         
         
         
