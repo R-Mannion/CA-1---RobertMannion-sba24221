@@ -52,7 +52,7 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
          BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath))) {
         
         String line;
-        while ((line = br.readLine()) != nul){
+        while ((line = br.readLine()) != null){
         String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
         if (nameParts.length < 2){
         bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
