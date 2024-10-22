@@ -39,7 +39,9 @@ public String getFullName() {
 }
 
 
-
+//Class 1 discounts = 30%, 20%, 10% depending on year of last purchase
+//Class 2 discounts = 15%, 13%, 5% depending on year of last purchase
+//Class 3 discounts = 3%, 0% depending on year of last purchase
 
 
 
