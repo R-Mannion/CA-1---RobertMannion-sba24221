@@ -16,5 +16,16 @@ import java.io.IOException;     //To catch errors from input/output
  */
 public class customerClass {
     
+    public static void main(String[] args) {
+        String inputFilePath = "testCustomers.txt"; //input file path
+        String outputFilePath = "testcustomerdiscount.txt";  //output file path
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
+         BufferedWriter bw = new BufferedWriter(new FileWriter(OutputFilePath));       
+        
+        
+    }
+    
+    
     
 }
