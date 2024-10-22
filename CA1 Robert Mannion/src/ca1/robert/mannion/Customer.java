@@ -23,6 +23,7 @@ public class Customer {
     private int lastPurchaseYear;
 
 
+    
 
 
 public Customer(String firstName, String lastName, double amountSpent, int customerClass, int lastPurchaseYear) {
@@ -40,7 +41,6 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
     private static boolean isValidLastName(String lastName) {
     return lastName.matches("[a-zA-Z0-9]+");//defines isValidLastName //allows letters and numbers in lastname
     }
-    
     
     
     
@@ -125,9 +125,7 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         
         }       
         
-        
     }
-    
     
 }
 
