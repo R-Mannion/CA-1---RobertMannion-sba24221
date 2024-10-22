@@ -2,6 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+
+
+// https://github.com/R-Mannion/CA-1---RobertMannion-sba24221
+//Link to GitHub repo
+
+
+
+
 package ca1.robert.mannion;
 
 import java.io.BufferedReader; //To read text from input file and increase effeciency with file reader
