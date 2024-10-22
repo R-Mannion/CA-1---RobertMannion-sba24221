@@ -123,6 +123,8 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         bw.newLine();
         }
         
+        } catch (IOException e) {
+        e.printStackTrace(); //To catch when there is an IOException
         }       
         
     }
