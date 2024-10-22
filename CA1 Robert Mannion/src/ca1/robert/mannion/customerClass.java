@@ -26,7 +26,7 @@ public class customerClass {
         String line;
         while ((line = br.readLine()) != nul){
         String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
-        if (nameParts.lenght < 2){
+        if (nameParts.length < 2){
         bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
         bw.newLine();
         continue; //moves onto next customer
