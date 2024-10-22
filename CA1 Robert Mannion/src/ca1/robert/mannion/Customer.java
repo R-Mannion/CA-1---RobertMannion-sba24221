@@ -43,7 +43,53 @@ public String getFullName() {
 //Class 2 discounts = 15%, 13%, 5% depending on year of last purchase
 //Class 3 discounts = 3%, 0% depending on year of last purchase
 
+public double calculateFinalCost() {
+    double discountRate = 0.0;
+    int currentYear = 2024; 
+    int yearsSinceLastPurchase = currentYear - lastPurchaseYear;
 
+    if (customerClass == 1) {
+        if (lastPurchaseYear == 2024) {
+        discountRate = 0.30;
+        } else if (yearsSinceLastPurchase <= 5){
+        discountRate = 0.20;
+        } else {
+           discountRate = 0.10; 
+        }
+    } else if (customerClass == 2) {
+        if (lastPurchaseYear == 2024) {
+            discountRate = 0.15; 
+        } else if (yearsSinceLastPurchase <= 5) {
+            discountRate = 0.13; 
+        } else {
+            discountRate = 0.05; 
+        }
+    } else if (customerClass == 3) {
+        if (lastPurchaseYear == 2024) {
+            discountRate = 0.03; 
+        } else if (yearsSinceLastPurchase > 5) {
+            discountRate = 0.00; 
+        }
+        
+    } 
+            
+            
+            
+            
+    double discount = amountSpent * discountRate;
+    return amountSpent - discount;
+        
+        
+        
+    
+    
+
+
+
+
+    
+}
+    
 
 
 
