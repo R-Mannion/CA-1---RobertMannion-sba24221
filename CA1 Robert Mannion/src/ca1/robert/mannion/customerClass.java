@@ -16,6 +16,17 @@ import java.io.IOException;     //To catch errors from input/output
  */
 public class customerClass {
     
+    private static boolean isValidFirstName(String firstName) {
+    return firstName.matches("[a-zA-Z]+"); //defines isValidFirstName //only allows for letters in firstName
+    }
+    
+    private static boolean isValidLastName(String lastName) {
+    return lastName.matches("[a-zA-Z0-9]+");//defines isValidLastName //allows letters and numbers in lastname
+    }
+    
+    
+    
+    
     public static void main(String[] args) {
         String inputFilePath = "testCustomers.txt"; //input file path
         String outputFilePath = "testcustomerdiscount.txt";  //output file path
