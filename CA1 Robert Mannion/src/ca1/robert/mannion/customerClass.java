@@ -62,6 +62,19 @@ public class customerClass {
         }
         
         
+        double amountSpent; 
+        try {
+            amountSpent = Double.parseDouble(amountSpentStr);//convert from string to double
+        } catch (NumberFormatException e){
+        bw.write("Error: Invalid amount entered for customer: " + firstName + " " + lastName); //catch error and output error message
+        bw.newLine();
+        continue; //program moves on and skip rest current customers loop
+        }
+        
+        
+        
+        
+        
         }
         
         }       
