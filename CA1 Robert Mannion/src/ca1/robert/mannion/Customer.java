@@ -116,7 +116,7 @@ public double calculateFinalCost() {
             String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
             if (nameParts.length < 2){
                 bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
-                bw.newLine();
+                bw.newLine();//moves to next line
                 continue; //moves onto next customer
                 }
         
@@ -128,13 +128,13 @@ public double calculateFinalCost() {
         
         if (!isValidFirstName(firstName)) {
             bw.write("Error: Invalid customer first name: " + lastName);//error message for invalid customer first name
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
         }
         
         if (!isValidLastName(lastName)) {
             bw.write("Error: Invalid customer last name: " + firstName); //error message for invalid customer last name
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
         }
         
@@ -144,7 +144,7 @@ public double calculateFinalCost() {
             amountSpent = Double.parseDouble(amountSpentStr);//convert from string to double
         } catch (NumberFormatException e){
             bw.write("Error: Invalid amount entered for customer: " + firstName + " " + lastName); //catch error and output error message
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue; //program moves on and skip rest current customers loop
             }
         
@@ -153,13 +153,13 @@ public double calculateFinalCost() {
             customerClass = Integer.parseInt(customerClassStr); //converts variable to an integer
             if (customerClass < 1 || customerClass > 3){ //checks if class is between 1 and 3
             bw.write("Error: Class must be between 1 and 3 for customer: " + firstName + " " + lastName); //error message if class falls outside the range
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
             }
         
         } catch (NumberFormatException e){ //catch if input is not a number
             bw.write("Error: Invalid class for customer: " + firstName + " " + lastName); //error message if class is input is not a number
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
         }
         
@@ -168,23 +168,23 @@ public double calculateFinalCost() {
             lastPurchaseYear = Integer.parseInt(lastPurchaseYearStr); //converts the year of the customers last purchase from a string to an integer
         if (lastPurchaseYear > 2024) { //checks to make sure the year given is not a future year
             bw.write("Error: Invalid year of last purchase for customer: " + firstName + " " + lastName); //error message if the year gievn is after the current year
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
         }
         
         
         } catch (NumberFormatException e) {
             bw.write("Error: Invalid year for customer: " + firstName + " " + lastName); //error message if the year inputted is invalid
-            bw.newLine();
+            bw.newLine();//moves to next line
             continue;
         }
         
         Customer customer = new Customer(firstName, lastName, amountSpent, customerClass, lastPurchaseYear);
         double finalCost = customer.calculateFinalCost();
             bw.write(customer.getFullName());
-            bw.newLine(); 
+            bw.newLine();//moves to next line
             bw.write(Double.toString(finalCost)); 
-            bw.newLine();
+            bw.newLine();//moves to next line
         }
         
         } catch (IOException e) {
