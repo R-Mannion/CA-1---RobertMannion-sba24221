@@ -14,7 +14,24 @@ import java.io.IOException;     //To catch errors from input/output
  *
  * @author manni
  */
-public class customerClass {
+
+public class Customer {
+    private String firstName;
+    private String lastName;
+    private double amountSpent;
+    private int customerClass;
+    private int lastPurchaseYear;
+
+
+
+
+public Customer(String firstName, String lastName, double amountSpent, int customerClass, int lastPurchaseYear) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.amountSpent = amountSpent;
+        this.customerClass = customerClass;
+        this.lastPurchaseYear = lastPurchaseYear;
+}
     
     private static boolean isValidFirstName(String firstName) {
     return firstName.matches("[a-zA-Z]+"); //defines isValidFirstName //only allows for letters in firstName
@@ -43,11 +60,7 @@ public class customerClass {
         continue; //moves onto next customer
         }
         
-        String firstName = nameParts[0]; //first name (1st line)
-        String lastName = String.join(" ", java.util.Arrays.copyOfRange(nameParts, 1, nameParts.length));//second name (1st line)
-        String amountSpentStr = br.readLine().trim(); //Amount customer is spending (2nd line)
-        String customerClassStr = br.readLine().trim(); //Class customer is in (3rd line)
-        String lastPurchaseYearStr = br.readLine().trim(); //Year of customers last purchase (4th line)
+     
         
         if (!isValidFirstName(firstName)) {
             bw.write("Error: Invalid customer first name: " + lastName);//error message for invalid customer first name
@@ -104,8 +117,10 @@ public class customerClass {
         continue;
         }
         
-        
-        
+        Customer customer = new Customer(firstName, lastName, amountSpent, customerClass, lastPurchaseYear);
+        double finalCost = customer.calculateFinalCost();
+        bw.write(customer.getFullName() + " " + finalCost);
+        bw.newLine();
         }
         
         }       
@@ -114,5 +129,5 @@ public class customerClass {
     }
     
     
-    
 }
+
