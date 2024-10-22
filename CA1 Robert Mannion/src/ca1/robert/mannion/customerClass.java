@@ -21,7 +21,20 @@ public class customerClass {
         String outputFilePath = "testcustomerdiscount.txt";  //output file path
         
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
-         BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath)));       
+         BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath))) {
+        
+        String line;
+        while ((line = br.readLine()) != nul){
+        String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
+        if (nameParts.lenght < 2){
+        bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
+        bw.newLine();
+        continue; //moves onto next customer
+        }
+        
+        }
+        
+        }       
         
         
     }
