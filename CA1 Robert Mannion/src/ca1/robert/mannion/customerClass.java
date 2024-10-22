@@ -32,6 +32,25 @@ public class customerClass {
         continue; //moves onto next customer
         }
         
+        String firstName = nameParts[0]; //first name (1st line)
+        String lastName = String.join(" ", java.util.Arrays.copyOfRange(nameParts, 1, nameParts.length));//second name (1st line)
+        String amountSpentStr = br.readLine().trim(); //Amount customer is spending (2nd line)
+        String customerClassStr = br.readLine().trim(); //Class customer is in (3rd line)
+        String lastPurchaseYearStr = br.readLine().trim(); //Year of customers last purchase (4th line)
+        
+        if (!isValidFirstName(firstName)) {
+            bw.write("Error: Invalid customer first name: " + lastName);//error message for invalid customer first name
+            bw.newLine();
+            continue;
+        }
+        
+        if (!isValidLastName(lastName)) {
+            bw.write("Error: Invalid customer last name: " + firstName); //error message for invalid customer last name
+            bw.newLine();
+            continue;
+        }
+        
+        
         }
         
         }       
