@@ -34,6 +34,16 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         this.lastPurchaseYear = lastPurchaseYear;
 }
     
+public String getFullName()
+
+
+
+
+
+
+
+
+
     private static boolean isValidFirstName(String firstName) {
     return firstName.matches("[a-zA-Z]+"); //defines isValidFirstName //only allows for letters in firstName
     }
@@ -53,14 +63,18 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         
         String line;
         while ((line = br.readLine()) != null){
-        String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
-        if (nameParts.length < 2){
-        bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
-        bw.newLine();
-        continue; //moves onto next customer
-        }
+            String[] nameParts = line.trim().split(" ");//Split first lin einto first and second name variables
+            if (nameParts.length < 2){
+                bw.write("Error: Invalid name format: " + line); //error message if name format is incorrect
+                bw.newLine();
+                continue; //moves onto next customer
+                }
         
-     
+     String firstName = nameParts[0];
+                String lastName = String.join(" ", java.util.Arrays.copyOfRange(nameParts, 1, nameParts.length));
+                String amountSpentStr = br.readLine().trim(); 
+                String customerClassStr = br.readLine().trim(); 
+                String lastPurchaseYearStr = br.readLine().trim();
         
         if (!isValidFirstName(firstName)) {
             bw.write("Error: Invalid customer first name: " + lastName);//error message for invalid customer first name
@@ -93,12 +107,10 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
             continue;
             }
         
- 
         } catch (NumberFormatException e){ //catch if input is not a number
             bw.write("Error: Invalid class for customer: " + firstName + " " + lastName); //error message if class is input is not a number
             bw.newLine();
             continue;
-        
         }
         
         int lastPurchaseYear;
