@@ -34,7 +34,9 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         this.lastPurchaseYear = lastPurchaseYear;
 }
     
-public String getFullName()
+public String getFullName() {
+    return firstName + " " + lastName; //method for getting customers full name by combining first and last names
+}
 
 
 
