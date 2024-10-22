@@ -105,7 +105,7 @@ public double calculateFinalCost() {
     
     
     public static void main(String[] args) {
-        String inputFilePath = "C:\\Users\\manni\\Desktop\\Prog&Maths CA1\\CA-1---RobertMannion-sba24221\\CA1 Robert Mannion\\src\\ca1\\robert\\mannion\\customers.txt"; //input file path
+        String inputFilePath = "C:/Users/manni/Desktop/Prog&Maths CA1/CA-1---RobertMannion-sba24221/CA1 Robert Mannion/src/ca1/robert/mannion/customers.txt"; //input file path
         String outputFilePath = "C:\\Users\\manni\\Desktop\\Prog&Maths CA1\\CA-1---RobertMannion-sba24221\\CA1 Robert Mannion\\src\\ca1\\robert\\mannion\\customerdiscount.txt";  //output file path
         
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
@@ -181,7 +181,9 @@ public double calculateFinalCost() {
         
         Customer customer = new Customer(firstName, lastName, amountSpent, customerClass, lastPurchaseYear);
         double finalCost = customer.calculateFinalCost();
-            bw.write(customer.getFullName() + " " + finalCost);
+            bw.write(customer.getFullName());
+            bw.newLine(); 
+            bw.write(Double.toString(finalCost)); 
             bw.newLine();
         }
         
