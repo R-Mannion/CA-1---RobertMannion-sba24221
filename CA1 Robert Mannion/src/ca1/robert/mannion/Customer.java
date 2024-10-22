@@ -86,7 +86,7 @@ public Customer(String firstName, String lastName, double amountSpent, int custo
         
         int customerClass;
         try {
-            customerClass = Integer.parseInt(customerClass); //converts variable to an integer
+            customerClass = Integer.parseInt(customerClassStr); //converts variable to an integer
             if (customerClass < 1 || customerClass > 3){ //checks if class is between 1 and 3
             bw.write("Error: Class must be between 1 and 3 for customer: " + firstName + " " + lastName); //error message if class falls outside the range
             bw.newLine();
